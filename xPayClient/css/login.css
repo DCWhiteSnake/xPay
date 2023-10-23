@@ -1,0 +1,38 @@
+*{
+        box-sizing: border-box;
+}
+body{
+        background-color: black;
+        color: white;
+      
+}
+.loading-symbol {
+        width: 98px;
+        height: 98px;
+        position: relative;
+}
+
+.loading-symbol-container {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid #00000000;
+        margin: auto;
+        overflow: hidden;
+        top:400px;
+        left: 48vw;
+
+}
+
+.loginFormContainer{
+        border-radius: 20px;
+        background-color: rgb(167, 244, 244);
+        height: 500px;
+        width: 700px;
+        color: black;;
+}
+
+.hidden{
+        display: none;
+}

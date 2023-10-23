@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+                crossorigin="anonymous">
+        <script type="module" src="js/api_routes.js"></script>
+        <script type="module" src="js/auth.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+
+<body>
+        <div class="container mt-5 mb-2 loginFormContainer">
+                <form action="" method="post" id="adminLoginForm" class="col-md-6 mx-auto">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter your username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="my-2">
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                </form>
+            </div>
+            </body>
+
+</html>

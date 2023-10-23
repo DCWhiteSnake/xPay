@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>xPay-HQ</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+                crossorigin="anonymous">
+        <script type="module" src="./js/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+        <div class="container" style="background-color: #bbffffaa;">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container">
+                                <a class="navbar-brand" href="#">
+                                        <img src="./img/xPayLogo.png" alt="xPay Logo" height="50">
+                                </a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                        aria-label="Toggle navigation">
+                                        <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                        <ul class="navbar-nav">
+                                                <li class="nav-item">
+                                                        <a name="accounts" class="nav-link" href="#" id="accounts">
+                                                                <i class="fas fa-users"></i> Accounts
+                                                        </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a name="payment" class="nav-link" href="#" id="paymentFlow">
+                                                                <i class="fas fa-money-bill-wave"></i> Payment Flow
+                                                        </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a name="ledgers" class="nav-link" href="#" id="ledgers">
+                                                                <i class="fas fa-book"></i> Ledgers
+                                                        </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a name="support" class="nav-link" href="#" id="support">
+                                                                <i class="fas fa-life-ring"></i> Support
+                                                        </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a class="nav-link" href="#" id="support">
+                                                                <button class="btn btn-primary"
+                                                                        id="logoutBtn">Logout</button>
+                                                        </a>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </div>
+                </nav>
+        </div>
+        <div class="container">
+                <div name="accounts" class="featureBox" id="accountsFeatureBox">
+                        <div class="container">
+                                <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+                                        <div class="col-12">
+                                                <h2>
+                                                        Accounts
+                                                </h2>
+
+                                                <div>
+                                                        <h4>Lock an account</h4>
+                                                        <form id="lockSingleForm" action="">
+                                                                <div>
+                                                                        <div class="my-2">
+                                                                                <input name="username" type="text"
+                                                                                        placeholder="enter user name ie., dcwhitesnake">
+
+                                                                                <input name="minutes" type="number"
+                                                                                        placeholder="enter lockout duration ie., 1000">
+                                                                        </div>
+
+                                                                        <button type="submit" style="display: inline;"
+                                                                                class="btn btn-primary">Lock <i
+                                                                                        class="fa-solid fa-lock"></i></button>
+                                                                        <i id="lockSingleFormSuccessTick"
+                                                                                class="fa-solid fa-check"
+                                                                                style="color: #28a31f; display: none;"></i>
+
+                                                                </div>
+                                                        </form>
+                                                        <h4>Unlock an account</h4>
+                                                        <form id="unlockSingleForm" action="">
+                                                                <div>
+                                                                        <div class="my-2">
+                                                                                <input name="username" type="text"
+                                                                                        placeholder="enter user name ie., dcwhitesnake">
+
+                                                                        </div>
+
+                                                                        <button type="submit" style="display: inline;"
+                                                                                class="btn btn-primary">Unlock <i
+                                                                                        class="fa-solid fa-unlock"></i></button>
+                                                                        <i id="unlockSingleFormSuccessTick"
+                                                                                class="fa-solid fa-check"
+                                                                                style="color: #28a31f; display: none;"></i>
+
+                                                                </div>
+                                                        </form>
+                                                </div>
+                                                <div>
+                                                        <h4>Lock all accounts <i></i></h4>
+                                                        <form id="lockAllForm" action="">
+                                                                <input name="minutes" type="number"
+                                                                        placeholder="enter lockout duration ie., 1000">
+                                                                <div class="my-2">
+                                                                        <button class="btn btn-danger">Lock all <i
+                                                                                        class="fa-solid fa-lock"></i></button>
+
+                                                                        <i id="lockAllFormSuccessTick"
+                                                                                class="fa-solid fa-check"
+                                                                                style="color: #28a31f; display: none;"></i>
+                                                                </div>
+                                                        </form>
+                                                        <h4>Unlock all accounts <i></i></h4>
+                                                        <form id="unlockAllForm" action="">
+                                                                <div class="my-2">
+                                                                        <button class="btn btn-danger">Unlock all <i
+                                                                                        class="fa-solid fa-unlock"></i></button>
+
+                                                                        <i id="unlockAllFormSuccessTick"
+                                                                                class="fa-solid fa-check"
+                                                                                style="color: #28a31f; display: none;"></i>
+                                                                </div>
+                                                        </form>
+
+                                                </div>
+                                                <div>
+                                                        <h4>List accounts by filter</h4>
+                                                        <form id="listAccountsByFilterForm">
+                                                                <div class="form-group">
+                                                                        <label for="dropdown">Select an option:</label>
+                                                                        <select id="filterSelector"
+                                                                                name="filterSelectorDropdown">
+
+                                                                                <option value="Default">Default</option>
+                                                                                <option value="Locked">Locked</option>
+                                                                                <option value="Flagged">Flagged</option>
+                                                                        </select>
+                                                                </div>
+                                                                <button type="submit"
+                                                                        class="btn btn-primary">Search</button>
+                                                        </form>
+                                                        <div style="display: none" id="listAccountsByFilterOutput"
+                                                                class="my-2">
+                                                                <table class="table table-bordered table-striped"
+                                                                        id="usersTable">
+                                                                        <thead>
+                                                                                <tr>
+                                                                                        <td>username</td>
+                                                                                        <td>flagged</td>
+                                                                                        <td>lockoutEnabled</td>
+                                                                                        <td>lockoutEndDate</td>
+                                                                                        <td>savings</td>
+                                                                                        <td>withdrawalLimit</td>
+                                                                                </tr>
+                                                                        </thead>
+                                                                        <tbody id="listAccountsBody">
+
+                                                                        </tbody>
+                                                                </table>
+
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div name="payment" class="featureBox hidden" id="paymentFlowFeatureBox">Payments,
+                        throttling, payment management happens here.
+
+                        <div><input type="range" min=0 max=100></div>
+
+                        <div><input type="range" min=10 max=1000></div>
+                </div>
+                <div name="ledgers" class="featureBox hidden" id="ledgersFeatureBox">
+                        <button class="btn btn-info my-3" id="monthlyReportButton">Generate Monthly report</button>
+                </div>
+                <div name="support" class="featureBox hidden" id="supportFeatureBox">support, check and assign tickets
+                        here,
+                        coming soon</div>
+        </div>
+        <!-- Include Bootstrap and FontAwesome CSS and JavaScript -->
+        <script src="https://kit.fontawesome.com/4405757738.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
